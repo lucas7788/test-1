@@ -402,7 +402,7 @@ public class WebSocket_API {
 			System.out.println("height: " + height);
 			
 			OntTest.sdk().getWebSocket().getSmartCodeEvent(height);
-			Result rs = OntTest.common().waitWsResult("getsmartcodeeventtxs");
+			Result rs = OntTest.common().waitWsResult("getsmartcodeeventbyheight");
 			assertEquals(false, rs==null);
 			System.out.println("result: "+rs.Result.toString());
 
@@ -443,7 +443,7 @@ public class WebSocket_API {
 			OntTest.common().waitTransactionResult(s);
 			System.out.println(s);
 			OntTest.sdk().getWebSocket().getSmartCodeEvent(s);
-			Result rs = OntTest.common().waitWsResult("getsmartcodeevent");
+			Result rs = OntTest.common().waitWsResult("getsmartcodeeventbyhash");
 			
 			assertEquals(false, rs==null);
 			System.out.println(rs.Result.toString());
