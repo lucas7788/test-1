@@ -198,11 +198,9 @@ public class Invoke {
 	        assertEquals(true,ret.equals(exp));
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
 		}  catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -236,11 +234,10 @@ public class Invoke {
 	        assertEquals(true,ret.equals(exp));
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
+
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -279,7 +276,6 @@ public class Invoke {
 		}  catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -812,7 +808,7 @@ public class Invoke {
 	        System.out.println("b2 = "+b2);
 	        OntTest.logger().description("b1: " + b1);
 	        int ret = (int) b1.get("State");
-	        int exp = 1;
+	        int exp = 0;
 	        assertEquals(true,ret!=exp);
 //		} catch(SDKException e) {
 //	        Map err = (Map) JSON.parse(e.getMessage()); 
@@ -1094,7 +1090,7 @@ public class Invoke {
 	        OntTest.logger().description("b1: " + b1);
 	        int ret = (int) b1.get("State");
 	        int exp = 1;
-	        assertEquals(true,ret!=exp);
+	        assertEquals(true,ret==exp);
 		}  catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(false);

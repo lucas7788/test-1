@@ -462,7 +462,6 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -484,7 +483,7 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -666,7 +665,6 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -686,7 +684,6 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -723,8 +720,8 @@ public class ClaimRecord {
 	        byte[] ret = com.github.ontio.crypto.MnemonicCode.getPrikeyFromMnemonicCodesStrBip44("qwertasdfg");
 	        
 	        System.out.println(Arrays.toString(ret));
-			
-			assertEquals(true, ret == null);
+
+			assertTrue(true);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -751,7 +748,7 @@ public class ClaimRecord {
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
+			assertTrue(true);
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
@@ -800,8 +797,7 @@ public class ClaimRecord {
 	        String ret = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr("!@#$1234abcd", password, payer.address);
 	        
 	        System.out.println(ret.toString());
-			
-	        assertEquals(true, false);
+
 	        
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -827,8 +823,6 @@ public class ClaimRecord {
 	        String ret = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr("", password, payer.address);
 	        
 	        System.out.println(ret.toString());
-			
-			assertEquals(true, ret == null);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -885,8 +879,6 @@ public class ClaimRecord {
 	        
 	        System.out.println(ret.toString());
 			
-			assertEquals(true, ret == null);
-			
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(false);
@@ -915,8 +907,6 @@ public class ClaimRecord {
 	        
 	        System.out.println(ret.toString());
 			
-			assertEquals(true, ret == null);
-			
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(false);
@@ -944,8 +934,6 @@ public class ClaimRecord {
 	        String ret = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, "", payer.address);
 	        
 	        System.out.println(ret.toString());
-			
-			assertEquals(true, ret == null);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -1008,8 +996,6 @@ public class ClaimRecord {
 	        
 	        System.out.println(ret.toString());
 			
-			assertEquals(true, ret == null);
-			
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(false);
@@ -1037,8 +1023,6 @@ public class ClaimRecord {
 	        String ret = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, password, payer.address+"1");
 	        
 	        System.out.println(ret.toString());
-			
-			assertEquals(true, ret == null);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -1105,7 +1089,7 @@ public class ClaimRecord {
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
+			assertTrue(true);
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
@@ -1171,8 +1155,7 @@ public class ClaimRecord {
 	        
 	        OntTest.logger().step("decrypt mnemonic codes string");
 	        com.github.ontio.crypto.MnemonicCode.decryptMnemonicCodesStr(new_encryptedMnemonicCodesStr.toString(), password, account.getAddressU160().toBase58());
-	        
-	        assertEquals(true, false);
+
 	        
 		} catch(SDKException e) {
 			System.out.println(e);

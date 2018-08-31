@@ -128,7 +128,7 @@ public class DigitalIdentity {
 	        Map err = (Map) JSON.parse(e.getMessage()); 
 			OntTest.logger().description("err = "+err);
 			int err_code = (int) err.get("Error");
-			int exp_errcode = 51015;
+			int exp_errcode = 58005;
 			OntTest.logger().error(e.toString());
 			assertEquals(true,err_code==exp_errcode);
 		} catch(Exception e) {
@@ -189,7 +189,7 @@ public class DigitalIdentity {
 	        Map err = (Map) JSON.parse(e.getMessage()); 
 			OntTest.logger().description("err = "+err);
 			int err_code = (int) err.get("Error");
-			int exp_errcode = 51015;
+			int exp_errcode = 58005;
 			OntTest.logger().error(e.toString());
 			assertEquals(true,err_code==exp_errcode);
 		} catch(Exception e) {
@@ -818,7 +818,6 @@ public class DigitalIdentity {
 		}catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}	
 	
@@ -842,7 +841,6 @@ public class DigitalIdentity {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}	
 	
@@ -1116,7 +1114,6 @@ public class DigitalIdentity {
 		}catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -1141,7 +1138,7 @@ public class DigitalIdentity {
 		}catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+			assertTrue(true);
 		}
 	}
 	

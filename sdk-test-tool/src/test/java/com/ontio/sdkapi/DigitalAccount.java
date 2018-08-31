@@ -1055,7 +1055,7 @@ public class DigitalAccount {
 			Map er = (Map)JSON.parse(e.getMessage());
 			OntTest.logger().error(er.toString());
 			String er_code = er.get("Error").toString();
-			if("58501".equals(er_code)) {
+			if("58501".equals(er_code) || "58004".equals(er_code)) {
 				assertEquals(true,true);
 			}
 			else {
@@ -1457,8 +1457,12 @@ public class DigitalAccount {
 			String address = "Aa1TynaaMkeD2yVn1tjJ5RcxXTFd2CXFQ5";
 			OntTest.logger().print("2.获取账号信息");
 			Account acc = OntTest.sdk().getWalletMgr().getWallet().getAccount(address);
+			if(acc != null){
+                assertTrue(false);
+            }else {
+                assertTrue(true);
+            }
 			OntTest.logger().print(acc.toString());
-			assertTrue(false);
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
@@ -1482,7 +1486,11 @@ public class DigitalAccount {
 			OntTest.logger().print("2.获取账号信息");
 			Account acc = OntTest.sdk().getWalletMgr().getWallet().getAccount(address);
 			OntTest.logger().print(acc.toString());
-			assertTrue(false);
+            if(acc != null){
+                assertTrue(false);
+            }else {
+                assertTrue(true);
+            }
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
@@ -1506,7 +1514,11 @@ public class DigitalAccount {
 			OntTest.logger().print("2.获取账号信息");
 			Account acc = OntTest.sdk().getWalletMgr().getWallet().getAccount(address);
 			OntTest.logger().print(acc.toString());
-			assertTrue(false);
+            if(acc != null){
+                assertTrue(false);
+            }else {
+                assertTrue(true);
+            }
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
@@ -1529,7 +1541,11 @@ public class DigitalAccount {
 			OntTest.logger().print("2.获取账号信息");
 			Account acc = OntTest.sdk().getWalletMgr().getWallet().getAccount(address);
 			OntTest.logger().print(acc.toString());
-			assertTrue(false);
+            if(acc != null){
+                assertTrue(false);
+            }else {
+                assertTrue(true);
+            }
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
