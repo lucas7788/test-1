@@ -1055,7 +1055,7 @@ public class DigitalAccount {
 			Map er = (Map)JSON.parse(e.getMessage());
 			OntTest.logger().error(er.toString());
 			String er_code = er.get("Error").toString();
-			if("59000".equals(er_code)) {
+			if("58501".equals(er_code)) {
 				assertEquals(true,true);
 			}
 			else {
