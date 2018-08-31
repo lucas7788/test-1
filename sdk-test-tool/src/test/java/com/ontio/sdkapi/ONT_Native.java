@@ -1971,7 +1971,6 @@ public class ONT_Native {
 		}
 		catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -2204,11 +2203,9 @@ public class ONT_Native {
 			}
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
 		}
 		catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	

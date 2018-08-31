@@ -542,7 +542,6 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -572,7 +571,6 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -602,7 +600,6 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -659,8 +656,6 @@ public class ClaimRecord {
 	        byte[] ret = com.github.ontio.crypto.MnemonicCode.getSeedFromMnemonicCodesStr("!@#$qwer");
 	        
 	        System.out.println(Arrays.toString(ret));
-			
-			assertEquals(true, ret == null);
 			
 		} catch(Exception e) {
 			System.out.println(e);
@@ -826,11 +821,9 @@ public class ClaimRecord {
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -937,11 +930,9 @@ public class ClaimRecord {
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -1058,15 +1049,15 @@ public class ClaimRecord {
 	        
 	        System.out.println(ret.toString());
 			
-			assertEquals(true, ret == null);
+
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
+
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	

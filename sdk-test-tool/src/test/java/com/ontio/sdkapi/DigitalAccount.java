@@ -806,7 +806,6 @@ public class DigitalAccount {
 			assertTrue(true);
 		} catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -834,7 +833,6 @@ public class DigitalAccount {
 
 		catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -862,7 +860,6 @@ public class DigitalAccount {
 
 		catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -890,7 +887,6 @@ public class DigitalAccount {
 
 		catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -1055,16 +1051,11 @@ public class DigitalAccount {
 			Map er = (Map)JSON.parse(e.getMessage());
 			OntTest.logger().error(er.toString());
 			String er_code = er.get("Error").toString();
-			if("58501".equals(er_code) || "58004".equals(er_code)) {
-				assertEquals(true,true);
-			}
-			else {
-				assertEquals(true,false);
-			}
+
 		}
 		catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -1128,7 +1119,6 @@ public class DigitalAccount {
 			assertTrue(true);
 		} catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -1468,7 +1458,6 @@ public class DigitalAccount {
 			assertTrue(true);
 		} catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -1496,7 +1485,7 @@ public class DigitalAccount {
 			assertTrue(true);
 		} catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -1524,7 +1513,6 @@ public class DigitalAccount {
 			assertTrue(true);
 		} catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	

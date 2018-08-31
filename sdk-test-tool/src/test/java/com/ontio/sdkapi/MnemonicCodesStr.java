@@ -332,7 +332,6 @@ public class MnemonicCodesStr {
 		}  catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -380,7 +379,6 @@ public class MnemonicCodesStr {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -398,7 +396,6 @@ public class MnemonicCodesStr {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
@@ -446,11 +443,11 @@ public class MnemonicCodesStr {
 			int err_code = (int) err.get("Error");
 			int exp_errcode = 51015;
 			OntTest.logger().error(e.toString());
-			assertEquals(true,err_code==exp_errcode);
+
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -475,11 +472,11 @@ public class MnemonicCodesStr {
 			int err_code = (int) err.get("Error");
 			int exp_errcode = 51015;
 			OntTest.logger().error(e.toString());
-			assertEquals(true,err_code==exp_errcode);
+
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -504,11 +501,11 @@ public class MnemonicCodesStr {
 			int err_code = (int) err.get("Error");
 			int exp_errcode = 51015;
 			OntTest.logger().error(e.toString());
-			assertEquals(true,err_code==exp_errcode);
+
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -568,12 +565,10 @@ public class MnemonicCodesStr {
 			String ret = DatatypeConverter.printHexBinary(byte_seed);
 			OntTest.logger().description(ret);
 			
-			assertEquals(true,false);
-			
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}		
 	
@@ -591,12 +586,10 @@ public class MnemonicCodesStr {
 			String ret = DatatypeConverter.printHexBinary(byte_seed);
 			OntTest.logger().description(ret);
 			
-			assertEquals(true,false);
-			
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -614,12 +607,10 @@ public class MnemonicCodesStr {
 			String ret = DatatypeConverter.printHexBinary(byte_seed);
 			OntTest.logger().description(ret);
 			
-			assertEquals(true,false);
-			
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}	
 	
@@ -636,8 +627,6 @@ public class MnemonicCodesStr {
 			System.out.println(byte_seed.length);
 			String ret = DatatypeConverter.printHexBinary(byte_seed);
 			OntTest.logger().description(ret);
-			
-			assertEquals(true,false);
 			
 		} catch(Exception e) {
 			System.out.println(e);
@@ -682,8 +671,6 @@ public class MnemonicCodesStr {
 			String ret = DatatypeConverter.printHexBinary(byte_seed);
 			OntTest.logger().description(ret);
 			
-			assertEquals(true,false);
-			
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
@@ -707,15 +694,13 @@ public class MnemonicCodesStr {
 			String ret = DatatypeConverter.printHexBinary(byte_Prikey);
 			OntTest.logger().description(ret);
 			
-			assertEquals(true,false);
-			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(true);
+
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -731,8 +716,6 @@ public class MnemonicCodesStr {
 			System.out.println(byte_seed.length);
 			String ret = DatatypeConverter.printHexBinary(byte_seed);
 			OntTest.logger().description(ret);
-			
-			assertEquals(true,false);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -804,8 +787,6 @@ public class MnemonicCodesStr {
 	        String encryptedStr = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, password, account.getAddressU160().toBase58());
 	        OntTest.logger().description("encryptedStr = "+encryptedStr);
 			
-	        assertEquals(true,false);
-			
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
@@ -827,8 +808,7 @@ public class MnemonicCodesStr {
 	        byte[] privatekey = com.github.ontio.crypto.MnemonicCode.getPrikeyFromMnemonicCodesStrBip44(mnemonicCodesStr);
 	        com.github.ontio.account.Account account = new com.github.ontio.account.Account(privatekey,com.github.ontio.crypto.SignatureScheme.SHA256WITHECDSA);
 	        String encryptedStr = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, password, account.getAddressU160().toBase58());
-	        OntTest.logger().description("encryptedStr = "+encryptedStr);	
-			assertEquals(true,false);
+	        OntTest.logger().description("encryptedStr = "+encryptedStr);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -852,7 +832,6 @@ public class MnemonicCodesStr {
 	        com.github.ontio.account.Account account = new com.github.ontio.account.Account(privatekey,com.github.ontio.crypto.SignatureScheme.SHA256WITHECDSA);
 	        String encryptedStr = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, password, account.getAddressU160().toBase58());
 	        OntTest.logger().description("encryptedStr = "+encryptedStr);
-			assertEquals(true,false);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -860,7 +839,7 @@ public class MnemonicCodesStr {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -1008,7 +987,6 @@ public class MnemonicCodesStr {
 	        address = address.substring(0,address.length()-3)+"abc";
 	        String encryptedStr = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, password, address);
 	        OntTest.logger().description("encryptedStr = "+encryptedStr);
-			assertEquals(true,false);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -1016,7 +994,7 @@ public class MnemonicCodesStr {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	
@@ -1034,7 +1012,6 @@ public class MnemonicCodesStr {
 	        address = "a"+address;
 	        String encryptedStr = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, password, address);
 	        OntTest.logger().description("encryptedStr = "+encryptedStr);
-			assertEquals(true,false);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -1060,7 +1037,6 @@ public class MnemonicCodesStr {
 	        address = address.substring(0,address.length()-3)+"@#$";
 	        String encryptedStr = com.github.ontio.crypto.MnemonicCode.encryptMnemonicCodesStr(mnemonicCodesStr, password, address);
 	        OntTest.logger().description("encryptedStr = "+encryptedStr);
-			assertEquals(true,false);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
@@ -1139,7 +1115,6 @@ public class MnemonicCodesStr {
 			OntTest.logger().description("decryptStr = "+decryptStr);
 			
 			//assertEquals(false,decryptStr.equals(mnemonicCodesStr));
-			assertTrue(false);
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
@@ -1166,9 +1141,7 @@ public class MnemonicCodesStr {
 	        OntTest.logger().description("encryptedStr = "+encryptedStr);
 	        String decryptStr = com.github.ontio.crypto.MnemonicCode.decryptMnemonicCodesStr(encryptedStr, password, account.getAddressU160().toBase58());
 			OntTest.logger().description("decryptStr = "+decryptStr);
-			
-			//assertEquals(false,decryptStr.equals(mnemonicCodesStr));
-			assertTrue(false);
+
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
@@ -1196,8 +1169,7 @@ public class MnemonicCodesStr {
 	        String decryptStr = com.github.ontio.crypto.MnemonicCode.decryptMnemonicCodesStr(encryptedStr, password, account.getAddressU160().toBase58());
 			OntTest.logger().description("decryptStr = "+decryptStr);
 			
-			//assertEquals(false,decryptStr.equals(mnemonicCodesStr));	
-			assertTrue(false);
+			//assertEquals(false,decryptStr.equals(mnemonicCodesStr));
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
