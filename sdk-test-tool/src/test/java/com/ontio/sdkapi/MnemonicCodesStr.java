@@ -631,7 +631,6 @@ public class MnemonicCodesStr {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 
@@ -948,7 +947,6 @@ public class MnemonicCodesStr {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}	
 	
