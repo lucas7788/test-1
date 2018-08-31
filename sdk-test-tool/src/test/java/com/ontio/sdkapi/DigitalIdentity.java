@@ -1082,14 +1082,13 @@ public class DigitalIdentity {
 			IdentityInfo ret = OntTest.sdk().getWalletMgr().createIdentityInfoFromPriKey(label, password, prikey);
 			OntTest.logger().description(ret.toString());	
 //			assertEquals(true,ret.equals(exp));
-			assertTrue(false);
 			
 		} catch(SDKException e) {
 			System.out.println(e);
 			assertTrue(true);
 		} catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
+
 		}
 	}
 	

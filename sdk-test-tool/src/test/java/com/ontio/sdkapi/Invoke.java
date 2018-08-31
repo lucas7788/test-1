@@ -905,7 +905,7 @@ public class Invoke {
 	        	OntTest.logger().description("ong转账");
 	        	String txhash = OntTest.sdk().nativevm().ong().sendTransfer(acc0, addr1, ongnum, acc0, OntTest.sdk().DEFAULT_GAS_LIMIT, 0);
 	        	OntTest.common().waitTransactionResult(txhash);
-	        	assertEquals(true,false);
+
 	        	OntTest.logger().description("目前包含ong数目(应该为0) : "+OntTest.sdk().nativevm().ong().queryBalanceOf(addr0));
 	        }
 	        
@@ -931,7 +931,6 @@ public class Invoke {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-
 		}
 	}
 	

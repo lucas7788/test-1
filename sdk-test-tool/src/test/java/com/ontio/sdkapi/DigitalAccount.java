@@ -1539,7 +1539,6 @@ public class DigitalAccount {
 			assertTrue(true);
 		} catch(Exception e) {
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	

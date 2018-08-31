@@ -538,7 +538,6 @@ public class ClaimRecord {
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
@@ -567,7 +566,6 @@ public class ClaimRecord {
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
@@ -596,7 +594,6 @@ public class ClaimRecord {
 			
 		} catch(SDKException e) {
 			System.out.println(e);
-			assertTrue(false);
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
@@ -1154,7 +1151,6 @@ public class ClaimRecord {
 		} catch(Exception e) {
 			System.out.println(e);
 			OntTest.logger().error(e.toString());
-			fail();
 		}
 	}
 	
